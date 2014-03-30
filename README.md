@@ -2,13 +2,13 @@
 
 ##原理
 1. 请求接口（GET）：  
-http://ip.taobao.com/service/getIpInfo.php?ip=[ip地址字串]
+    `http://ip.taobao.com/service/getIpInfo.php?ip=[ip地址字串]`
 
 2. 响应信息：  
 （json格式的）国家 、省（自治区或直辖市）、市（县）、运营商
 
 3. 返回数据格式：  
-
+```
     {
         "code": 0, 
         "data": {
@@ -27,7 +27,7 @@ http://ip.taobao.com/service/getIpInfo.php?ip=[ip地址字串]
             "country": "\u4e2d\u56fd"
         }
     }
-
+```
 其中code的值的含义为，0：成功，1：失败。
 
 
@@ -35,13 +35,13 @@ http://ip.taobao.com/service/getIpInfo.php?ip=[ip地址字串]
 1. info(ip\_list)  
 查询ip列表信息，返回json格式的列表信息
 
-2. show\_info(data\_list)
+2. show\_info(data\_list)  
 格式化输出json格式的列表信息
 
 ##例子
 `show_info(info(['8.8.8.8']))`
 
 ##参考
-1. 淘宝IP地址库[rel](http://ip.taobao.com/index.php)
-2. unirest 网络库[rel](http://unirest.io/python.html)
-3. ipinfo.io [rel](http://ipinfo.io/)
+1. 淘宝IP地址库,[link](http://ip.taobao.com/index.php)
+2. unirest 网络库,[link](http://unirest.io/python.html)
+3. ipinfo.io,[link](http://ipinfo.io/)
